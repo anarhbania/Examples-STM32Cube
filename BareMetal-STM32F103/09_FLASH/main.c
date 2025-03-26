@@ -62,7 +62,7 @@ int main(void)
 	}
 
 	FLASH->CR |= FLASH_CR_PG; // enable programming mode
-	*(volatile uint16_t *)ADDRESS = data; // set variable to address
+	*(uint16_t *)ADDRESS = data; // set variable to address
 	while(FLASH->SR & FLASH_SR_BSY); // check if FLASH busy
 	FLASH->CR &= ~FLASH_CR_PG; // disable programming mode
 
