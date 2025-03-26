@@ -12,6 +12,7 @@ volatile uint64_t tickGet; // variable for save time
 #define ADDRESS 0x0803F800 // set FLASH address where save variable
 
 uint16_t data = 0x1234; // variable for save in FLASH
+uint16_t dataRead; // variable read from FLASH
 
 int main(void)
 {
@@ -70,6 +71,10 @@ int main(void)
 
 	FLASH->CR |= FLASH_CR_LOCK; // lock FLASH
 
+	/////////// READ FLASH
+	
+	dataRead = *(volatile uint16_t *)ADDRESS; // read variable from address
+	
 	while(1)
 	{
 
