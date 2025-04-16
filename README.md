@@ -1,3 +1,5 @@
+# How to use?
+
 ### 1. Create new project (empty)
 ### 2. Copy Drivers/CMSIS to project
 ### 3. Project -> Properties -> C/C++ General -> Paths and Symbols -> Source Location -> Add Folder "Drivers"
